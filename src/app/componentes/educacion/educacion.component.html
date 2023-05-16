@@ -1,0 +1,146 @@
+<!--tarjeta educacion-->
+  <div class="card-cabeza">
+    <div class="" id="">
+      <h2 class="" id="">
+        Educacion
+      </h2>
+    </div>
+    <div class="" id="col-btn">
+      <!--boton de lapiz-->
+      <a type="" class="" *ngIf="generalService.vistabtn">
+        <i class="bi bi-pencil lapiz" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#staticBackdrop0"></i>
+        <i class="bi bi-trash2" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"></i>
+        <i class="bi bi-plus" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#staticBackdrop3"></i>
+      </a>
+    </div>
+  </div>
+  <ul class="lista-skills" *ngFor="let educacion of educacionList">
+    <li class="items-card">
+        <div class="content-img">
+          <img [src]="educacion?.img" alt="" class="img-list">
+        </div>
+        <div class="card-cuerpo">
+          <h3 class="titulo-edu">{{educacion.titulo}}</h3>
+          <p>{{educacion?.fechaIni}} - {{educacion?.fechaFin}}</p>
+          <p>{{educacion?.descripcion}}</p>
+        </div>
+    </li>
+  </ul>
+
+
+  <!--Modal de edicion-->
+<div class="modal fade" id="staticBackdrop0" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="formulario.reset()"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="editarEducacion()">
+          <label for="exampleFormControlInput1"class="form-label">Elegir educación</label>
+          <select class="form-control" id="select-idEdu" (change)="mostrarDatos()" formControlName="id" aria-label="Default select example" >
+            <option *ngFor="let educacion of educacionList" [value]="educacion.id">{{educacion.titulo}}</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput1"
+             >
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1-1" class="form-label">Titulo</label>
+            <input type="text" class="form-control"  formControlName="titulo" id="exampleFormControlInput1-1"
+            >
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1-2" class="form-label">Fecha de Inicio</label>
+            <input type="number" class="form-control"  formControlName="fechaIni" id="exampleFormControlInput1-2">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1-3" class="form-label">Fecha de finalizacion</label>
+            <input type="number" class="form-control"  formControlName="fechaFin" id="exampleFormControlInput1-3">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1-4" class="form-label">Descripción</label>
+            <textarea class="form-control" formControlName="descripcion" id="exampleFormControlTextarea1-4"
+              rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="formulario.reset()">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para eliminar-->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="eliminarEducacion()">
+          <label for="example"class="form-label">ID</label>
+          <select class="form-control" formControlName="id" aria-label="Default select example" >
+            <option *ngFor="let educacion of educacionList" [value]="educacion.id">{{educacion.titulo}}</option>
+          </select>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Eliminar educación</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para agregar nueva-->
+<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (ngSubmit)="agregarEducacion()">
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Icono</label>
+            <input type="email" class="form-control" formControlName="img" id="exampleFormControlInput2"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2-1" class="form-label">Titulo</label>
+            <input type="email" class="form-control" formControlName="titulo" id="exampleFormControlInput2-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2-3" class="form-label">Fecha de Inicio</label>
+            <input type="number" class="form-control" formControlName="fechaIni" id="exampleFormControlInput2-3">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2-4" class="form-label">Fecha de finalizacion</label>
+            <input type="number" class="form-control" formControlName="fechaFin" id="exampleFormControlInput2-4">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea2-5" class="form-label">Descripción</label>
+            <textarea class="form-control" formControlName="descripcion" id="exampleFormControlTextarea2-5"
+              rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary"data-bs-dismiss="modal">Guardar nuevo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

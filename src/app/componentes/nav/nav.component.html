@@ -1,0 +1,56 @@
+<nav class="navbar navbar-dark fixed-top" id="fondo">
+    <div class="container-fluid">
+        <!--BARRA DE NAVEGACION-->
+        <a class="navbar-brand" href="#">Argentina Programa <span>#Yoprogramo</span> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--BARRA DESPLEGABLE LATERAL-->
+        <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel" >
+            <div class="offcanvas-header" >
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="width: 45%;">Porfolio</h5>
+                    <div class="cajaDeFoto">
+                        <img [src]="fotoPerfil?.fotoPerfil" alt="usuario" class="perfil"> 
+                    </div>
+                <button type="button" class="btn-close btn-close-white" style="width: 15%;" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-dismiss="offcanvas"
+                     aria-current="page" href="#encabezado"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-dismiss="offcanvas"href="#educacion"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-dismiss="offcanvas" href="#experiencia"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-dismiss="offcanvas"href="#skills"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-dismiss="offcanvas" href="#proyectos"></a>
+                    </li>
+                    <app-login *ngIf="generalService.iniciar"></app-login>
+                    <li>
+                        <button type="button" class="btn login" id="iniciar"*ngIf="generalService.btnLog" (click)="generalService.iniciar=true; generalService.btnLog=false;"><i>Iniciar sesión</i></button>
+                        <button type="button" class="btn login hide-element" data-bs-dismiss="offcanvas" *ngIf="generalService.vistabtn" (click)="cerrarSesion()"><i>Cerrar sesión</i></button>
+                    </li>
+                    <li>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="redes"><i class="bi bi-instagram"></i></button>
+                            <button type="button" class="redes"><i class="bi bi-linkedin"></i></button>                 
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+

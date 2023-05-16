@@ -1,0 +1,146 @@
+<!--SECCION DE EXPERIENCIA-->
+<div class="textos" id="experiencia">
+  <div class="card-cabeza">
+    <div class="" id="">
+      <h2 class="" id="">
+        Experiencia
+      </h2>
+    </div>
+    <div class="" id="col-btn">
+      <!--boton de lapiz-->
+      <a type="" class="" *ngIf="generalService.vistabtn">
+        <i class="bi bi-pencil lapiz" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#editarexp"></i>
+        <i class="bi bi-trash2" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#eliminarexp"></i>
+        <i class="bi bi-plus" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarexp"></i>
+      </a>
+    </div>
+  </div>
+  <ul class="lista-skills" *ngFor="let experiencia of experienciaList">
+    <li class="items-card">
+      <div class="content-img">
+        <img [src]="experiencia.img" alt="" class="img-list">
+      </div>
+      <div class="card-cuerpo">
+        <h3 class="titulo-exp">{{experiencia.titulo}}</h3>
+        <p> <time>{{experiencia.fechaIni}}</time> - <time>{{experiencia.fechaFin}}</time></p>
+        <p>{{experiencia.descripcion}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<!--Modal de edicion-->
+<div class="modal fade" id="editarexp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"(click)="formulario.reset()"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="editarExperiencia()">
+          <label for="exampleFormControlInput" class="form-label">Elegir Experiencia</label>
+          <select class="form-control" formControlName="id" id="select-idExp" (change)="mostrarDatos()" aria-label="Default select example">
+            <option *ngFor="let experiencia of experienciaList" [value]="experiencia.id">{{experiencia.titulo}}</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput3" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3-1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput3-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3-2" class="form-label">Fecha de Inicio</label>
+            <input type="number" class="form-control" formControlName="fechaIni" id="exampleFormControlInput3-2">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput3-3" class="form-label">Fecha de finalizacion</label>
+            <input type="number" class="form-control" formControlName="fechaFin" id="exampleFormControlInput3-3">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea3-4" class="form-label">Descripción</label>
+            <textarea class="form-control" formControlName="descripcion" id="exampleFormControlTextarea3-4"
+              rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"(click)="formulario.reset()">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para eliminar-->
+<div class="modal fade" id="eliminarexp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="eliminarExperiencia()">
+          <label for="exampleFormControlInput1" class="form-label">ID</label>
+          <select class="form-control" formControlName="id" aria-label="Default select example">
+            <option *ngFor="let experiencia of experienciaList" [value]="experiencia.id">{{experiencia.titulo}}</option>
+          </select>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Eliminar experiencia</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para agregar nueva-->
+<div class="modal fade" id="agregarexp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="agregarExperiencia()">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput4" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput4-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de Inicio</label>
+            <input type="number" class="form-control" formControlName="fechaIni" id="exampleFormControlInput4-2">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de finalizacion</label>
+            <input type="number" class="form-control" formControlName="fechaFin" id="exampleFormControlInput4-3">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+            <textarea class="form-control" formControlName="descripcion" id="exampleFormControlTextarea4-4"
+              rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

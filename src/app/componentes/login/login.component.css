@@ -1,0 +1,22 @@
+.card{
+      width: 100%;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.card-body{
+      border: 1px solid;
+      border-radius: inherit;
+      padding-top: 15px;
+      padding: 25px;
+      gap: 15px;
+      color: white;
+}
+
+.form-text{
+      color: white;
+      font-weight: 400;
+
+}

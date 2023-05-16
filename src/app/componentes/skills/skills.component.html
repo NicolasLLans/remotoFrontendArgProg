@@ -1,0 +1,137 @@
+<div class="card-cabeza" id="skills">
+  <div class="" id="">
+    <h2 class="" id="">
+      Hard Skills & Soft Skills
+    </h2>
+  </div>
+  <div class="" id="col-btn">
+    <!--boton de lapiz-->
+    <a type="" class="" *ngIf="generalService.vistabtn">
+      <i class="bi bi-pencil lapiz" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#editarskills"></i>
+      <i class="bi bi-trash2" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#eliminarskills"></i>
+      <i class="bi bi-plus" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarskills"></i>
+    </a>
+  </div>
+</div>
+<div class="textos">
+  <ul class="lista-skills" *ngFor="let skills of skillsList">
+    <!--Barra de progreso-->
+    <li class="items-card">
+      <div class="content-img">
+        <img [src]="skills.img" class="img-list" alt="">
+      </div>
+      <div class="content-titulo-barra">
+        <h3 class="titulo-skills">{{skills.titulo}}</h3>
+        <p>{{skills.descripcion}}</p>      
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example"
+          [style.width.%]="skills.porcentaje" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><p style="margin: 0;">{{skills.porcentaje}}%</p></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!--Modal de edicion-->
+<div class="modal fade" id="editarskills" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Skills</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"(click)="formulario.reset()"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="editarSkills()">
+          <label for="exampleFormControlInput1" class="form-label">Elegir Skill</label>
+          <select class="form-control" formControlName="id" id="select-id" (change)="mostrarDatos()" aria-label="Default select example">
+            <option *ngFor="let skills of skillsList" [value]="skills.id">{{skills.titulo}}</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput5" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput5-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Descripcion</label>
+            <input type="text" class="form-control" formControlName="descripcion" id="exampleFormControlInput5-2"
+              placdholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">porcentaje</label>
+            <input type="number" class="form-control" formControlName="porcentaje" id="exampleFormControlInput5-3"
+              placeholder="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"(click)="formulario.reset()">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para eliminar-->
+<div class="modal fade" id="eliminarskills" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="eliminarSkills()">
+          <label for="exampleFormControlInput1" class="form-label">ID</label>
+          <select class="form-control" formControlName="id" aria-label="Default select example">
+            <option *ngFor="let skills of skillsList" [value]="skills.id">{{skills.titulo}}</option>
+          </select>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal de agregar nuevo-->
+<div class="modal fade" id="agregarskills" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Skills</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="agregarSkills()">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput6" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput6-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">porcentaje</label>
+            <input type="number" class="form-control" formControlName="porcentaje" id="exampleFormControlInput6-2"
+              placeholder="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

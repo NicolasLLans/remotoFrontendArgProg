@@ -1,0 +1,73 @@
+#fondo{
+    background-color: rgba(0, 0, 0, 0.541);
+    height: 58px;
+}
+#offcanvasDarkNavbar{
+    background-color: rgba(0, 0, 0, 1);
+	background-image: linear-gradient(329deg, rgba(0, 0, 0, 1) 6%, rgba(61, 74, 57, 1) 20%, rgba(67, 75, 107, 1) 40%, rgba(23, 54, 72, 1) 60%, rgba(3, 11, 16, 1) 80%, rgba(0, 0, 0, 1) 100%);
+}
+#offcanvasDarkNavbarLabel{
+    color: aliceblue;
+}
+a span{
+    font-size: 14px;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-toggler:hover{
+    border: 1px solid;
+}
+
+.navbar-toggler{
+    color: rgb(250, 250, 250); 
+    font-size: smaller; 
+    width: 50px; 
+    border: none;
+}
+i{
+    color: aliceblue;
+}
+.login{
+    background-color: rgb(71, 132, 245);
+    margin-bottom: 15px;
+}
+button i{
+    background-color: none;
+}
+.redes{
+    background-color: #f0f8ff00;
+    border: none;
+    width: 15%;
+
+}
+#iniciar{
+    display: block;
+}
+.botonM{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2%;
+}
+
+.perfil{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.cajaDeFoto{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(18, 18, 22);
+}
+
+.container-fluid{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}

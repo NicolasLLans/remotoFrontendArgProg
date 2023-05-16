@@ -1,0 +1,36 @@
+.card-header img{
+      position: relative;
+      width: 100px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid;
+}
+
+.card-body{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: start;
+      padding: 50px 25px 25px 25px;
+}
+ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+}
+
+.modal-content{
+      text-align:start ;
+}
+
+h2{
+      background-color: #a9b3c408;
+      padding: 10px 0;
+      border-radius: 3px;
+}
+
+p{
+      font-weight: 400;
+}

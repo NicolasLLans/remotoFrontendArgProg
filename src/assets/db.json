@@ -1,0 +1,92 @@
+{
+    "persona": 
+        [{
+            "id": 1,
+            "imgPerfil":"https://avatars.githubusercontent.com/u/117937431?v=4",
+            "nombre": "Victoria",
+            "apellido": "Camblor",
+            "estudios": "Full Stack Devoloper Jr",
+            "acercaDe": "Emprendedora y estudiante de programación. Vivo en Capital federal. "
+        }]
+    ,
+
+    "educacion": 
+        [{
+            "id": 1,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "titulo":"UBA",
+            "fechaIni":"20/02/2023",
+            "fechaFin":"25/02/2023",
+            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        },{
+            "id": 2,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "titulo":"UTN",
+            "fechaIni":"20/02/2023",
+            "fechaFin":"25/02/2023",
+            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        },{
+            "id": 3,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "titulo":"EEM n°2",
+            "fechaIni":"20/02/2023",
+            "fechaFin":"25/02/2023",
+            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        },{
+            "id": 4,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "titulo":"Jacarandá",
+            "fechaIni":"20/02/2023",
+            "fechaFin":"25/02/2023",
+            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        }]
+    ,
+    "skills": 
+        [{
+            "id": 1,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "porcentaje":90,
+            "nombre":"html"
+        },
+        {
+            "id": 2,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "porcentaje":25,
+            "nombre":"js"
+        },
+        {
+            "id": 3,
+            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
+            "porcentaje":90,
+            "nombre":"css"
+        }]
+    ,
+    "proyectos": 
+        [{
+            "id":1,
+            "nombre": "calculadora online",
+            "descripcion": "lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        },
+    {
+        "id":2,
+        "nombre":"tarjeta de producto",
+        "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj" 
+    }]
+    ,
+    "experiencia":
+        [{
+            "id":1,
+            "fechaIni":"2019",
+            "fechaFin":"2020",
+            "imagen":"../../../assets/img/card-text.svg",
+            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        },
+        {
+            "id":2,
+            "fechaIni":"2019",
+            "fechaFin":"2022",
+            "imagen":"../../../assets/img/card-text.svg",
+            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
+        }
+    ]
+}

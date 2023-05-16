@@ -1,0 +1,55 @@
+.caja-1 {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 25px;
+      flex-wrap: wrap;
+}
+
+.titulo-footer {
+      height: 25px;
+}
+
+.card-contenedor {
+      border: none;
+      background: transparent;
+}
+
+.espacio {
+      height: 100px;
+}
+
+.menu {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      list-style: none;
+      text-decoration: none;
+      padding: 25px;
+      margin: 0;
+      align-content: center;
+}
+
+.barra-footer {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      padding: 25px;
+      width: 95%;
+      margin: auto;
+      max-width: 1200px;
+      background-color: #0c132159;
+      height: 200px;
+}
+
+app-login {
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+      justify-content: center;
+}

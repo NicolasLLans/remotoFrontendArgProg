@@ -1,0 +1,152 @@
+<!--ENCABEZADO DE TARJETA PROYECTO-->
+<div class="cabeza-tarjeta" id="proyectos">
+  <div class="" id="">
+    <h2 class="" id="">
+      Mis proyectos
+    </h2>
+  </div>
+  <div class="" id="col-btn">
+    <!--boton de lapiz-->
+    <a type="" class="contenedor-iconos" *ngIf="generalService.vistabtn">
+      <i class="bi bi-pencil lapiz" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#editarpro"></i>
+      <i class="bi bi-trash2" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#eliminarpro"></i>
+      <i class="bi bi-plus" id="btn-edicion" data-bs-toggle="modal" data-bs-target="#agregarpro"></i>
+    </a>
+  </div>
+</div>
+<div class="contenedor-proyectos">
+  <!--CUERPO DE LA TARJETA PROYECTO-->
+  <div class="caja-tarjeta" *ngFor="let proyectos of proyectoList" [style.background-image]="'url(' + proyectos.img + ')'">
+    <li class="tarjeta-de-proyecto" >
+      <h3>{{proyectos.titulo}}</h3>
+      <div class="tarjeta-pie">
+        <p class="descripcion-tarjeta">{{proyectos.descripcion}}</p>
+        <button type="button" class="boton-tarjeta"><a [href]="proyectos.link" target="_blank" rel="noreferrer noopener">Ver más</a></button>
+      </div>
+    </li>
+  </div>
+</div>
+
+
+
+
+
+
+<!--Modal de edicion-->
+<div class="modal fade" id="editarpro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Proyectos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="formulario.reset()"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="editarProyectos()">
+          <label for="exampleFormControlInput1" class="form-label">Elegir Proyecto</label>
+          <select class="form-control" formControlName="id" id="select-idProy" (change)="mostrarDatos()"aria-label="Default select example">
+            <option *ngFor="let proyecto of proyectoList" [value]="proyecto.id">{{proyecto.titulo}}</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput7" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput7-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Enlace al proyecto</label>
+            <input type="text" class="form-control" formControlName="link" id="exampleFormControlInput7-2" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de Inicio</label>
+            <input type="number" class="form-control" formControlName="fechaIni" id="exampleFormControlInput7-3">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de finalizacion</label>
+            <input type="number" class="form-control" formControlName="fechaFin" id="exampleFormControlInput7-5">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+            <textarea class="form-control" formControlName="descripcion" id="exampleFormControlTextarea7-4"
+              rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"(click)="formulario.reset()">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para eliminar-->
+<div class="modal fade" id="eliminarpro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="eliminarProyectos()">
+          <label for="exampleFormControlInput1" class="form-label">ID</label>
+          <select class="form-control" formControlName="id" aria-label="Default select example">
+            <option *ngFor="let proyecto of proyectoList" [value]="proyecto.id">{{proyecto.titulo}}</option>
+          </select>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Eliminar proyecto</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal de agregar nuevo proyecto-->
+<div class="modal fade" id="agregarpro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Proyectos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formulario" (submit)="agregarProyectos()">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput8" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput8-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de Inicio</label>
+            <input type="number" class="form-control" formControlName="fechaIni" id="exampleFormControlInput8-2">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de finalizacion</label>
+            <input type="number" class="form-control" formControlName="fechaFin" id="exampleFormControlInput8-3">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+            <textarea class="form-control" formControlName="descripcion" id="exampleFormControlTextarea8-4"
+              rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
