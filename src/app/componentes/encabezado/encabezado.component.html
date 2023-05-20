@@ -1,23 +1,23 @@
 <div class="card-header" id="encabezado" [style.background-image]="'url(' + miPorfolio?.fotoBanner + ')'" style="background-position: center center;background-size: cover;
 background-color: rgb(203, 204, 204); display: flex;
     justify-content: flex-start;">
-    <img [src]="miPorfolio?.fotoPerfil" alt="" style="margin-bottom: -140px; background-color: rgb(122, 123, 124);">
+  <img [src]="miPorfolio?.fotoPerfil" alt="" style="margin-bottom: -140px; background-color: rgb(122, 123, 124);">
 </div>
 <div class="card-body">
-    <h1> {{miPorfolio?.nombre}} {{miPorfolio?.apellido}} </h1>
-    <h3>{{miPorfolio?.titulo}}</h3>
-    <p>{{miPorfolio?.localidad}}</p>
-    <ul >
-      <li>
-        <h2>Acerca de
-          <!--boton de lapiz-->
-          <a type="" *ngIf="generalService.vistabtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <i class="bi bi-pencil"></i>
-          </a>
-        </h2>
-        <p>{{miPorfolio?.descripcion}}</p>
-      </li>
-    </ul>
+  <h1> {{miPorfolio?.nombre}} {{miPorfolio?.apellido}} </h1>
+  <h3>{{miPorfolio?.titulo}}</h3>
+  <p>{{miPorfolio?.localidad}}</p>
+  <ul>
+    <li>
+      <h2>Acerca de
+        <!--boton de lapiz-->
+        <a type="" *ngIf="generalService.vistabtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <i class="bi bi-pencil"></i>
+        </a>
+      </h2>
+      <p>{{miPorfolio?.descripcion}}</p>
+    </li>
+  </ul>
 </div>
 
 <!--Modal-->
@@ -31,42 +31,47 @@ background-color: rgb(203, 204, 204); display: flex;
       </div>
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="editarPerfil()">
-          <div class="mb-3">
-            <label for="idporfolio" class="form-label">ID</label>
-            <input type="text" class="form-control" formControlName="id" id="idporfolio">
+          <div class="step-1">
+            <div class="mb-3 id-perfil">
+              <label for="idporfolio" class="form-label">ID</label>
+              <input type="text" class="form-control" formControlName="id" id="idporfolio">
+            </div>
+            <div class="mb-3">
+              <label for="nombrePorfolio" class="form-label">Nombre</label>
+              <input type="text" class="form-control" formControlName="nombre" id="nombrePorfolio">
+            </div>
+            <div class="mb-3">
+              <label for="ApellidoPerfil" class="form-label">Apellido</label>
+              <input type="text" class="form-control" formControlName="apellido" id="ApellidoPerfil">
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="nombrePorfolio" class="form-label">Nombre</label>
-            <input type="text" class="form-control" formControlName="nombre" id="nombrePorfolio">
+          <div class="step-2">
+            <div class="mb-3">
+              <label for="tituloPorfolio" class="form-label">Título</label>
+              <input type="text" class="form-control" formControlName="titulo" id="tituloPorfolio">
+            </div>
+            <div class="mb-3">
+              <label for="localidadPorfolio" class="form-label">Localidad</label>
+              <input type="text" class="form-control" formControlName="localidad" id="localidadPorfolio">
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="ApellidoPerfil" class="form-label">Apellido</label>
-            <input type="text" class="form-control" formControlName="apellido" id="ApellidoPerfil">
-          </div>
-          <div class="mb-3">
-            <label for="tituloPorfolio" class="form-label">Título</label>
-            <input type="text" class="form-control"  formControlName="titulo" id="tituloPorfolio">
-          </div>
-          <div class="mb-3">
-            <label for="localidadPorfolio" class="form-label">Localidad</label>
-            <input type="text" class="form-control" formControlName="localidad" id="localidadPorfolio">
-          </div>
-          <div class="mb-3">
-            <label for="fotoPerfil" class="form-label">Foto de Perfil</label>
-            <input type="text" class="form-control"  formControlName="fotoPerfil" id="fotoPerfil">
-          </div>
-          <div class="mb-3">
-            <label for="fotoBanner" class="form-label">Foto de Portada</label>
-            <input type="text" class="form-control" formControlName="fotoBanner" id="fotoBanner">
+          <div class="step-3">
+            <div class="mb-3">
+              <label for="fotoPerfil" class="form-label">Foto de Perfil</label>
+              <input type="text" class="form-control" formControlName="fotoPerfil" id="fotoPerfil">
+            </div>
+            <div class="mb-3">
+              <label for="fotoBanner" class="form-label">Foto de Portada</label>
+              <input type="text" class="form-control" formControlName="fotoBanner" id="fotoBanner">
+            </div>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea7" class="form-label">Descripción</label>
-            <textarea class="form-control" formControlName="descripcion" id="descripcion"
-              rows="3"></textarea>
+            <textarea class="form-control" formControlName="descripcion" id="descripcion" rows="3"></textarea>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" >Guardar cambios</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
           </div>
         </form>
       </div>

@@ -25,6 +25,28 @@ ul{
       text-align:start ;
 }
 
+.modal-footer{
+      flex-wrap: nowrap;
+}
+
+.step-1{
+      display: flex;
+      gap: 10px;
+}
+
+.step-1 .id-perfil{
+      width:20%;
+}
+
+.step-2{
+      display: flex;
+      gap: 10px;
+}
+.step-3{
+      display: flex;
+      gap: 10px;
+}
+
 h2{
       background-color: #a9b3c408;
       padding: 10px 0;
