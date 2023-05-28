@@ -78,10 +78,25 @@ a {
       text-decoration: none;
 }
 
+form{
+      display: grid;
+    grid-template-columns: 50%;
+    gap: 10px;
+}
+
+.modal-footer{
+      grid-column: 1 / span2;
+}
+
 @media screen and (max-width: 900px) {
 
       .contenedor-proyectos {
             height: 89vh;
+      }
+
+      form{
+            display: flex;
+            flex-direction: column;
       }
 
 }

@@ -16,12 +16,14 @@
 </div>
 <div class="contenedor-proyectos">
   <!--CUERPO DE LA TARJETA PROYECTO-->
-  <div class="caja-tarjeta" *ngFor="let proyectos of proyectoList" [style.background-image]="'url(' + proyectos.img + ')'">
-    <li class="tarjeta-de-proyecto" >
+  <div class="caja-tarjeta" *ngFor="let proyectos of proyectoList"
+    [style.background-image]="'url(' + proyectos.img + ')'">
+    <li class="tarjeta-de-proyecto">
       <h3>{{proyectos.titulo}}</h3>
       <div class="tarjeta-pie">
         <p class="descripcion-tarjeta">{{proyectos.descripcion}}</p>
-        <button type="button" class="boton-tarjeta"><a [href]="proyectos.link" target="_blank" rel="noreferrer noopener">Ver más</a></button>
+        <button type="button" class="boton-tarjeta"><a [href]="proyectos.link" target="_blank"
+            rel="noreferrer noopener">Ver más</a></button>
       </div>
     </li>
   </div>
@@ -39,16 +41,21 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Proyectos</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="formulario.reset()"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          (click)="formulario.reset()"></button>
       </div>
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="editarProyectos()">
-          <label for="exampleFormControlInput1" class="form-label">Elegir Proyecto</label>
-          <select class="form-control" formControlName="id" id="select-idProy" (change)="mostrarDatos()"aria-label="Default select example">
-            <option *ngFor="let proyecto of proyectoList" [value]="proyecto.id">{{proyecto.titulo}}</option>
-          </select>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <label for="exampleFormControlInput1" class="form-label">Elegir Proyecto</label>
+            <select class="form-control" formControlName="id" id="select-idProy" (change)="mostrarDatos()"
+              aria-label="Default select example">
+              <option value="" disabled selected hidden>Selecciona una opción</option>
+              <option *ngFor="let proyecto of proyectoList" [value]="proyecto.id">{{proyecto.titulo}}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Captura de pantalla</label>
             <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput7" placeholder="">
           </div>
           <div class="mb-3">
@@ -58,7 +65,8 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Enlace al proyecto</label>
-            <input type="text" class="form-control" formControlName="link" id="exampleFormControlInput7-2" placeholder="">
+            <input type="text" class="form-control" formControlName="link" id="exampleFormControlInput7-2"
+              placeholder="">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Fecha de Inicio</label>
@@ -74,7 +82,8 @@
               rows="3"></textarea>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"(click)="formulario.reset()">Cerrar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              (click)="formulario.reset()">Cerrar</button>
             <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
           </div>
         </form>
@@ -94,9 +103,10 @@
       </div>
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="eliminarProyectos()">
-          <label for="exampleFormControlInput1" class="form-label">ID</label>
-          <select class="form-control" formControlName="id" aria-label="Default select example">
-            <option *ngFor="let proyecto of proyectoList" [value]="proyecto.id">{{proyecto.titulo}}</option>
+          <label for="exampleFormControlInput1" class="form-label" style="text-align: center;">Proyecto a eliminar</label>
+          <select class="form-control" formControlName="id" aria-label="Default select example" >
+            <option value="" disabled selected hidden>Selecciona una opción</option>
+            <option *ngFor="let proyecto of proyectoList" [value]="proyecto.id" >{{proyecto.titulo}}</option>
           </select>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -120,12 +130,17 @@
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="agregarProyectos()">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Icono</label>
+            <label for="exampleFormControlInput1" class="form-label">Captura de pantalla</label>
             <input type="text" class="form-control" formControlName="img" id="exampleFormControlInput8" placeholder="">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Titulo</label>
             <input type="text" class="form-control" formControlName="titulo" id="exampleFormControlInput8-1"
+              placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Enlace al proyecto</label>
+            <input type="text" class="form-control" formControlName="link" id="exampleFormControlInput8-9"
               placeholder="">
           </div>
           <div class="mb-3">
