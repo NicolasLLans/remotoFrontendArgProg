@@ -53,3 +53,16 @@ app-login {
       flex-wrap: wrap;
       justify-content: center;
 }
+
+.boton-wp{
+      border: 1px solid white;
+      border-radius: 14px;
+      margin: 10px 0px;
+      padding: 8px 24px;
+      text-decoration: none;
+      color: white;
+}
+
+.menu li{
+      margin-top: 12px;
+} 

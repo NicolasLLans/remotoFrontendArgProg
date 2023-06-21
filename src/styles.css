@@ -3,6 +3,9 @@
 	--color-secundario: #4A4A4A;
 	--color-fondo: #E9EBEE;
 	--color-contraste: #FFFFFF;
+	--degradado-bg:linear-gradient(329deg, rgba(0, 0, 0, 1) 6%, rgba(61, 74, 57, 1) 20%, rgba(67, 75, 107, 1) 40%, rgba(23, 54, 72, 1) 60%, rgba(3, 11, 16, 1) 80%, rgba(0, 0, 0, 1) 100%);
+	--titulo-h1: 'prompt', 'Roboto','sans-serif';
+	--texto-parrafo:'Space Grotesk','Roboto','sans-serif';
 }
 
 * {
@@ -16,13 +19,13 @@ body {
 	background: #333;
 	color: #d6cdc7;
 	background-color: rgba(0, 0, 0, 1);
-	background-image: linear-gradient(329deg, rgba(0, 0, 0, 1) 6%, rgba(61, 74, 57, 1) 20%, rgba(67, 75, 107, 1) 40%, rgba(23, 54, 72, 1) 60%, rgba(3, 11, 16, 1) 80%, rgba(0, 0, 0, 1) 100%);
+	background-image: var(--degradado-bg);
 	/* font-family: 'Roboto', sans-serif; */
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Oswald', sans-serif;
+	font-family: var(--titulo-h1);
 }
 
 h2 {
@@ -39,6 +42,7 @@ h3 {
 
 p {
 	margin: 0;
+	font-family: var(--texto-parrafo);
 }
 
 

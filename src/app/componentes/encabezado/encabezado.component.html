@@ -5,11 +5,11 @@ background-color: rgb(203, 204, 204); display: flex;
 </div>
 <div class="card-body">
   <h1> {{miPorfolio?.nombre}} {{miPorfolio?.apellido}} </h1>
-  <h3>{{miPorfolio?.titulo}}</h3>
+  <h3 style="color: #d9ff2f;">{{miPorfolio?.titulo}}</h3>
   <p>{{miPorfolio?.localidad}}</p>
   <ul>
     <li>
-      <h2>Acerca de
+      <h2 style="opacity: 0.5;">Resumen
         <!--boton de lapiz-->
         <a type="" *ngIf="generalService.vistabtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           <i class="bi bi-pencil"></i>

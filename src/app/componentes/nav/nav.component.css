@@ -12,6 +12,11 @@
 a span{
     font-size: 14px;
 }
+
+.navbar-brand{
+    opacity: 0.3;
+}
+
 .navbar-toggler:focus{
     box-shadow: none;
 }
@@ -70,4 +75,8 @@ button i{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+}
+
+.offcanvas-title{
+    opacity: 0.3;
 }
