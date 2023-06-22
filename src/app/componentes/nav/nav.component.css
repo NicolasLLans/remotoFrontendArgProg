@@ -77,6 +77,12 @@ button i{
     flex-direction: row;
 }
 
+@media (max-width: 250px) {
+    .navbar-brand {
+        font-size: 14px;
+    }
+}
+
 .offcanvas-title{
     opacity: 0.3;
 }
