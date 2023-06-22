@@ -80,3 +80,7 @@ button i{
 .offcanvas-title{
     opacity: 0.3;
 }
+
+.offcanvas-body{
+    display: flex;
+}
