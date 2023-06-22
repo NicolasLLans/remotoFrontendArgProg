@@ -1,6 +1,7 @@
 #fondo{
     background-color: rgba(0, 0, 0, 0.541);
     height: 58px;
+    padding: 0 16px;
 }
 #offcanvasDarkNavbar{
     background-color: rgba(0, 0, 0, 1);
