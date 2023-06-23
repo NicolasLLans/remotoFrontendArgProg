@@ -79,7 +79,7 @@ button i{
     flex-direction: row;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
     .navbar-brand {
         font-size: 14px;
     }
