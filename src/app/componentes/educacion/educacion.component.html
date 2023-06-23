@@ -14,8 +14,20 @@
       </a>
     </div>
   </div>
-  <ul class="lista-skills" *ngFor="let educacion of educacionList">
-    <li class="items-card">
+  <ul class="lista-skills" *ngIf="!educacionList" >
+    <li class="items-card" *ngFor="let educacion of educacionListDBJson">
+        <div class="content-img">
+          <img [src]="educacion?.img" alt="" class="img-list">
+        </div>
+        <div class="card-cuerpo">
+          <h3 class="titulo-edu">{{educacion.titulo}}</h3>
+          <p>{{educacion?.fechaIni}} - {{educacion?.fechaFin}}</p>
+          <p>{{educacion?.descripcion}}</p>
+        </div>
+    </li>
+  </ul>
+  <ul class="lista-skills" *ngIf="educacionList" >
+    <li class="items-card" *ngFor="let educacion of educacionList">
         <div class="content-img">
           <img [src]="educacion?.img" alt="" class="img-list">
         </div>

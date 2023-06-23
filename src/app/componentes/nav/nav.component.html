@@ -9,8 +9,16 @@
       <!--BARRA DESPLEGABLE LATERAL-->
       <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar"
          aria-labelledby="offcanvasDarkNavbarLabel">
-         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="width: 45%;">Porfolio</h5>
+         <div class="offcanvas-header" *ngIf="!fotoPerfil">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="width: 45%;">{{fotoPerfilDBJson?.nombre}}</h5>
+            <div class="cajaDeFoto">
+               <img [src]="fotoPerfilDBJson?.fotoPerfil" alt="usuario" class="perfil">
+            </div>
+            <button type="button" class="btn-close btn-close-white" style="width: 15%;" data-bs-dismiss="offcanvas"
+               aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-header" *ngIf="fotoPerfil">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="width: 45%;">{{fotoPerfil.nombre}}</h5>
             <div class="cajaDeFoto">
                <img [src]="fotoPerfil?.fotoPerfil" alt="usuario" class="perfil">
             </div>

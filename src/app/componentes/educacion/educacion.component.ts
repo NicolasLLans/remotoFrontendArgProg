@@ -16,6 +16,7 @@ import { Subject } from 'rxjs';
 export class EducacionComponent implements OnInit{
   public formulario!: FormGroup;
   educacionList: any;
+  educacionListDBJson:any;
   private educacionActualizada = new Subject<void>();
 
   constructor(public generalService: GeneralService, private formBuilder: FormBuilder, private educacionService: EducacionesService, private dataService: DataService) {}
@@ -29,6 +30,12 @@ export class EducacionComponent implements OnInit{
       fechaIni: ['', Validators.required],
       fechaFin: ['', Validators.required],
       descripcion: ['', Validators.required],
+    });
+
+    this.generalService.obtenerDbjson().subscribe(
+      (response:any) => {
+      this.educacionListDBJson = response[0].educacionList;
+      console.log(response[0].educacionList);
     });
 
     this.dataService.misEducaciones$.subscribe(data => {

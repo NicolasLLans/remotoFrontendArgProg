@@ -15,8 +15,20 @@
       </a>
     </div>
   </div>
-  <ul class="lista-skills" *ngFor="let experiencia of experienciaList">
-    <li class="items-card">
+  <ul class="lista-skills" *ngIf="!experienciaList">
+    <li class="items-card" *ngFor="let experiencia of experienciaListDBJson">
+      <div class="content-img">
+        <img [src]="experiencia.img" alt="" class="img-list">
+      </div>
+      <div class="card-cuerpo">
+        <h3 class="titulo-exp">{{experiencia.titulo}}</h3>
+        <p> <time>{{experiencia.fechaIni}}</time> - <time>{{experiencia.fechaFin}}</time></p>
+        <p>{{experiencia.descripcion}}</p>
+      </div>
+    </li>
+  </ul>
+  <ul class="lista-skills" *ngIf="experienciaList">
+    <li class="items-card" *ngFor="let experiencia of experienciaList">
       <div class="content-img">
         <img [src]="experiencia.img" alt="" class="img-list">
       </div>

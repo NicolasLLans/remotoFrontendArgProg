@@ -11,8 +11,9 @@ import { GeneralService } from 'src/app/general.service';
 })
 
 export class NavComponent implements OnInit {
-  public rutaImagen="../../../assets/img/usuario.png";
+  public rutaImagen="assets/img/usuario.png";
   fotoPerfil:any;
+  fotoPerfilDBJson:any;
 
 
   constructor(private ruta : Router, public generalService: GeneralService, private dataService: DataService,private location: Location){
@@ -20,6 +21,12 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit(): void{
+    this.generalService.obtenerDbjson().subscribe(
+      (response:any) => {
+      this.fotoPerfilDBJson = response[0];
+      console.log(response[0]);
+    });
+    
     this.dataService.miPorfolio$.subscribe(data => {
       this.fotoPerfil = data;
     });

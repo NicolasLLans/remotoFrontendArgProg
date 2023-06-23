@@ -14,9 +14,25 @@
   </div>
 </div>
 <div class="textos">
-  <ul class="lista-skills" *ngFor="let skills of skillsList">
+  <ul class="lista-skills" *ngIf="!skillsList">
     <!--Barra de progreso-->
-    <li class="items-card">
+    <li class="items-card" *ngFor="let skills of skillsListDBJson">
+      <div class="content-img">
+        <img [src]="skills.img" class="img-list" alt="">
+      </div>
+      <div class="content-titulo-barra">
+        <h3 class="titulo-skills">{{skills.titulo}}</h3>
+        <p>{{skills.descripcion}}</p>      
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example"
+          [style.width.%]="skills.porcentaje" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><p style="margin: 0;">{{skills.porcentaje}}%</p></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul class="lista-skills" *ngIf="skillsList">
+    <!--Barra de progreso-->
+    <li class="items-card" *ngFor="let skills of skillsList">
       <div class="content-img">
         <img [src]="skills.img" class="img-list" alt="">
       </div>

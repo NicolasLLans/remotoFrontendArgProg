@@ -17,6 +17,7 @@ export class SkillsComponent {
 
   public formulario!: FormGroup;
   skillsList:any;
+  skillsListDBJson:any;
   private skillsActualizada = new Subject<void>();
   
   constructor( public generalService: GeneralService, private formBuilder: FormBuilder, private dataService:DataService, private skillsService:SkillsService){
@@ -29,6 +30,12 @@ export class SkillsComponent {
       porcentaje: ['', [Validators.required]],
       descripcion: ['', [Validators.required]],
       img: ['', [Validators.required]]
+    });
+
+    this.generalService.obtenerDbjson().subscribe(
+      (response:any) => {
+      this.skillsListDBJson = response[0].skillsList;
+      console.log(response[0].skillsList);
     });
 
     this.dataService.misSkills$.subscribe(data => {

@@ -15,6 +15,7 @@ import { ExperienciasService } from 'src/app/servicios/experiencias.service';
 
 export class ExperienciaComponent {
   experienciaList: any;
+  experienciaListDBJson:any;
   private experienciaActualizada = new Subject<void>();
   public formulario!: FormGroup;
 
@@ -34,6 +35,12 @@ export class ExperienciaComponent {
       img: ['', [Validators.required]]
     });
 
+    this.generalService.obtenerDbjson().subscribe(
+      (response:any) => {
+      this.experienciaListDBJson = response[0].experienciaList;
+      console.log(response[0].experienciaList);
+    });
+    
     this.dataService.misExperiencias$.subscribe(data => {
       this.experienciaList = data;
     });
