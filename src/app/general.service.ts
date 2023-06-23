@@ -37,4 +37,10 @@ public obtenerInfoProy(): Observable<any>{
 }
 
 
+/* Solución temporal al problema del servidor: Cargar datos desde el dbJson hasta que lleguen los del servidor */
+
+public obtenerDbjson(): Observable<[0]>{
+  return this.http.get<[0]>('assets/db.json');
+}
+
 }

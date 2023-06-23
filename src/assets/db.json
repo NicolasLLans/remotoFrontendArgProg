@@ -1,92 +1,261 @@
-{
-    "persona": 
-        [{
-            "id": 1,
-            "imgPerfil":"https://avatars.githubusercontent.com/u/117937431?v=4",
-            "nombre": "Victoria",
-            "apellido": "Camblor",
-            "estudios": "Full Stack Devoloper Jr",
-            "acercaDe": "Emprendedora y estudiante de programación. Vivo en Capital federal. "
-        }]
-    ,
-
-    "educacion": 
-        [{
-            "id": 1,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "titulo":"UBA",
-            "fechaIni":"20/02/2023",
-            "fechaFin":"25/02/2023",
-            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        },{
-            "id": 2,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "titulo":"UTN",
-            "fechaIni":"20/02/2023",
-            "fechaFin":"25/02/2023",
-            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        },{
-            "id": 3,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "titulo":"EEM n°2",
-            "fechaIni":"20/02/2023",
-            "fechaFin":"25/02/2023",
-            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        },{
-            "id": 4,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "titulo":"Jacarandá",
-            "fechaIni":"20/02/2023",
-            "fechaFin":"25/02/2023",
-            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        }]
-    ,
-    "skills": 
-        [{
-            "id": 1,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "porcentaje":90,
-            "nombre":"html"
-        },
-        {
-            "id": 2,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "porcentaje":25,
-            "nombre":"js"
-        },
-        {
-            "id": 3,
-            "imagen": "https://w7.pngwing.com/pngs/874/183/png-transparent-computer-icons-school-school.png",
-            "porcentaje":90,
-            "nombre":"css"
-        }]
-    ,
-    "proyectos": 
-        [{
-            "id":1,
-            "nombre": "calculadora online",
-            "descripcion": "lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        },
+[
     {
-        "id":2,
-        "nombre":"tarjeta de producto",
-        "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj" 
-    }]
-    ,
-    "experiencia":
-        [{
-            "id":1,
-            "fechaIni":"2019",
-            "fechaFin":"2020",
-            "imagen":"../../../assets/img/card-text.svg",
-            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        },
-        {
-            "id":2,
-            "fechaIni":"2019",
-            "fechaFin":"2022",
-            "imagen":"../../../assets/img/card-text.svg",
-            "descripcion":"lorem aosldsk akjsdjaskd askdjaksdja  kjaskdjaksdj aksjdaksjd  aksjdakjsd kajsdkajsd kajskjasdkj"
-        }
-    ]
-}
+        "id": 1,
+        "nombre": "Nicolas Lautaro",
+        "apellido": "Lanselota",
+        "titulo": "Developer Full Stack Jr",
+        "localidad": "CABA, Argentina",
+        "descripcion": "Apasionado programador Full Stack Jr. con experiencia en Angular, Spring Boot, React, Node.js y Express. Mi enfoque es desarrollar soluciones intuitivas y eficientes para mejorar la experiencia del usuario.",
+        "fotoPerfil": "https://i.imgur.com/7xygCwI.png",
+        "fotoBanner": "https://i.gifer.com/origin/0e/0e01e56732d4fae6e63f9fc4beeaded9.gif",
+        "educacionList": [
+            {
+                "id": 1,
+                "titulo": "Argentina Programa",
+                "fechaIni": 2021,
+                "fechaFin": 2022,
+                "descripcion": "Developer Full Stack jr.",
+                "img": "https://i.imgur.com/Povg0FN.png"
+            },
+            {
+                "id": 2,
+                "titulo": "Tenicatura en Desarrollo de software",
+                "fechaIni": 2023,
+                "fechaFin": 0,
+                "descripcion": "curso de ingreso de la tecnicatura.",
+                "img": "https://ifts12online.com.ar/IFTS_12/imagenes/logo-gcba1.png"
+            },
+            {
+                "id": 202,
+                "titulo": "UBA",
+                "fechaIni": 2012,
+                "fechaFin": 2015,
+                "descripcion": "Diseño Gráfico",
+                "img": "https://acortar.link/b5ZEOk"
+            },
+            {
+                "id": 203,
+                "titulo": "OpenBootCamp",
+                "fechaIni": 2022,
+                "fechaFin": 2023,
+                "descripcion": "Java Basico e intermedio",
+                "img": "https://media-exp2.licdn.com/dms/image/C4E0BAQFYpd4o3bagjg/company-logo_200_200/0/1631600310329?e=2147483647&v=beta&t=x1ZWQlwNYW7RthQqi4eugH52PwQvh6dUxckdaD3Gnx4"
+            }
+        ],
+        "skillList": [
+            {
+                "id": 1,
+                "titulo": "HTML",
+                "descripcion": "",
+                "img": "https://www.abdiseno.com.ar/wp-content/uploads/2015/09/html5-logo-600-580x5801.jpg",
+                "porcentaje": 95
+            },
+            {
+                "id": 53,
+                "titulo": "Typescript",
+                "descripcion": null,
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
+                "porcentaje": 90
+            },
+            {
+                "id": 102,
+                "titulo": "JS",
+                "descripcion": null,
+                "img": "https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/11531819/JAVASCRIPT.png",
+                "porcentaje": 80
+            },
+            {
+                "id": 152,
+                "titulo": "JAVA",
+                "descripcion": "",
+                "img": "https://cdn.freebiesupply.com/logos/large/2x/java-logo-png-transparent.png",
+                "porcentaje": 90
+            },
+            {
+                "id": 158,
+                "titulo": "CSS",
+                "descripcion": null,
+                "img": "https://webroad.pl/wp-content/uploads/2014/07/css3-logo.jpg",
+                "porcentaje": 90
+            },
+            {
+                "id": 252,
+                "titulo": "NODE JS",
+                "descripcion": null,
+                "img": "https://vistaran-tech.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/05/13104926/nodejs-logo.png",
+                "porcentaje": 90
+            },
+            {
+                "id": 253,
+                "titulo": "Angular",
+                "descripcion": null,
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
+                "porcentaje": 90
+            },
+            {
+                "id": 254,
+                "titulo": "React",
+                "descripcion": null,
+                "img": "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+                "porcentaje": 80
+            },
+            {
+                "id": 256,
+                "titulo": "Spring Boot",
+                "descripcion": null,
+                "img": "https://spring.io/img/logos/spring-initializr.svg",
+                "porcentaje": 90
+            },
+            {
+                "id": 302,
+                "titulo": "MySQL",
+                "descripcion": "",
+                "img": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-transparent-svg-vector-bie-supply-2.png",
+                "porcentaje": 85
+            },
+            {
+                "id": 303,
+                "titulo": "MongoDB",
+                "descripcion": null,
+                "img": "https://w7.pngwing.com/pngs/429/921/png-transparent-mongodb-plain-wordmark-logo-icon.png",
+                "porcentaje": 85
+            }
+        ],
+        "experienciaList": [
+            {
+                "id": 1,
+                "titulo": "Fauna Cosmética Natural",
+                "fechaIni": 2020,
+                "fechaFin": 2023,
+                "descripcion": "Tienda online",
+                "img": "https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_1280.png"
+            },
+            {
+                "id": 3,
+                "titulo": "Developer full stack jr",
+                "fechaIni": 2022,
+                "fechaFin": 2023,
+                "descripcion": "tienda online aplicaciones",
+                "img": "https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_1280.png"
+            },
+            {
+                "id": 102,
+                "titulo": "Tisky",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Tienda online",
+                "img": "https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_1280.png"
+            }
+        ],
+        "proyectosList": [
+            {
+                "id": 1,
+                "titulo": "Fauna Cosmética Natural Tienda",
+                "fechaIni": 2020,
+                "fechaFin": 2021,
+                "descripcion": "Sitio web, con tienda online hecho con wordpress.",
+                "img": "https://i.imgur.com/JUc6RQc.png",
+                "link": "https://faunacosmeticanatural.com/"
+            },
+            {
+                "id": 2,
+                "titulo": "Lista de tareas",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Aplicacion hecha en angular con un servidor JsonServer de prueba",
+                "img": "https://i.imgur.com/YTX5toL.png",
+                "link": "https://inspiring-raindrop-33e1d4.netlify.app/"
+            },
+            {
+                "id": 102,
+                "titulo": "Cuenta regresiva",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Desarrollada con html, css y js.",
+                "img": "https://i.imgur.com/FgerVc1.png",
+                "link": "https://cuentaregresivanico.netlify.app/"
+            },
+            {
+                "id": 103,
+                "titulo": "Calculadora",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Desarrollada con html, css, js.",
+                "img": "https://i.imgur.com/oxxYWyK.png",
+                "link": "https://calculadoradenico.netlify.app/"
+            },
+            {
+                "id": 252,
+                "titulo": "Drag and Drop componente",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Drag and Drop componente hecho con la librería sortable.",
+                "img": "https://i.imgur.com/m2oWuD4.png",
+                "link": "https://draganddropsortablenico.netlify.app/"
+            },
+            {
+                "id": 302,
+                "titulo": "Formulario de pasos",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Maquetado con HTML, CSS y JS. simula ser un carrito de compra.",
+                "img": "https://i.imgur.com/CoaH5SY.png",
+                "link": "https://formulario-steps.netlify.app/"
+            },
+            {
+                "id": 352,
+                "titulo": "Generador de QR",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Generador de QR en Angular. ",
+                "img": "https://i.imgur.com/fofDpkR.png",
+                "link": "https://generadordeqr-nicodev.netlify.app/"
+            },
+            {
+                "id": 402,
+                "titulo": "Clon de YouTube",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Hecho con Angular",
+                "img": "https://i.imgur.com/XrgQUeg.png",
+                "link": "https://clondeyoutube.netlify.app/"
+            },
+            {
+                "id": 452,
+                "titulo": "Modo claro/oscuro",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Desarrollo modo claro/oscuro en JS",
+                "img": "https://i.imgur.com/8waAtES.png",
+                "link": "https://modo-claro-oscuro.netlify.app/"
+            },
+            {
+                "id": 453,
+                "titulo": "Ta-te-ti",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Desarrollado con Vite+React",
+                "img": "https://imgur.com/XKJqzVa.png",
+                "link": "https://tatetinico.netlify.app/"
+            },
+            {
+                "id": 454,
+                "titulo": "Tarjeta de producto",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Proyecto FontMentor, HTML, JS, CSS",
+                "img": "https://imgur.com/wQR9yig.png",
+                "link": "https://tarjetadeproducto.netlify.app/"
+            },
+            {
+                "id": 502,
+                "titulo": "Tisky tienda online",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Tienda online con wordpress",
+                "img": "https://imgur.com/9RQJmVP.png",
+                "link": "https://tisky.com.ar/"
+            }
+        ]
+    }
+]

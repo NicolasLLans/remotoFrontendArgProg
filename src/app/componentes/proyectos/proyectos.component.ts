@@ -13,6 +13,7 @@ import { ProyectosService } from 'src/app/servicios/proyectos.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent {
+  proyectoListDBJson:any;
   proyectoList: any;
   private proyectoActualizada = new Subject<void>();
   formulario!: FormGroup;
@@ -28,6 +29,12 @@ export class ProyectosComponent {
       descripcion: ['', [Validators.required]],
       img: ['', [Validators.required]],
       link: ['', [Validators.required]]
+    });
+
+    this.generalService.obtenerDbjson().subscribe(
+      (response:any) => {
+      this.proyectoListDBJson = response[0].proyectosList;
+      console.log(response[0].proyectosList);
     });
 
     this.dataService.misProyectos$.subscribe(data => {

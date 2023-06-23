@@ -14,9 +14,23 @@
     </a>
   </div>
 </div>
-<div class="contenedor-proyectos">
+<div class="contenedor-proyectos" *ngIf="!proyectoList">
   <!--CUERPO DE LA TARJETA PROYECTO-->
-  <div class="caja-tarjeta" *ngFor="let proyectos of proyectoList"
+  <div class="caja-tarjeta"  *ngFor="let proyectos of proyectoListDBJson"
+    [style.background-image]="'url(' + proyectos.img + ')'">
+    <li class="tarjeta-de-proyecto">
+      <h3>{{proyectos.titulo}}</h3>
+      <div class="tarjeta-pie">
+        <p class="descripcion-tarjeta">{{proyectos.descripcion}}</p>
+        <button type="button" class="boton-tarjeta"><a [href]="proyectos.link" target="_blank"
+            rel="noreferrer noopener">Ver más</a></button>
+      </div>
+    </li>
+  </div>
+</div>
+<div class="contenedor-proyectos" *ngIf="proyectoList">
+  <!--CUERPO DE LA TARJETA PROYECTO-->
+  <div class="caja-tarjeta"  *ngFor="let proyectos of proyectoList"
     [style.background-image]="'url(' + proyectos.img + ')'">
     <li class="tarjeta-de-proyecto">
       <h3>{{proyectos.titulo}}</h3>

@@ -1,9 +1,33 @@
-<div class="card-header" id="encabezado" [style.background-image]="'url(' + miPorfolio?.fotoBanner + ')'" style="background-position: center center;background-size: cover;
+<div class="card-header" *ngIf="!miPorfolio" id="encabezado" [style.background-image]="'url(' + dataJson?.fotoBanner + ')'" style="background-position: center center;background-size: cover;
+background-color: rgb(203, 204, 204); display: flex;
+    justify-content: flex-start;">
+  <img [src]="dataJson?.fotoPerfil" alt="" style="margin-bottom: -140px; background-color: rgb(122, 123, 124);">
+</div>
+<div class="card-body" *ngIf="!miPorfolio">
+  <section>
+    <h1> {{dataJson?.nombre}} {{dataJson?.apellido}} </h1>
+    <h3 style="color: #d9ff2f;">{{dataJson?.titulo}}</h3>
+    <p>{{dataJson?.localidad}}</p>
+  </section>
+  <ul>
+    <li>
+      <h3 style="opacity: 0.5;">Resumen
+        <!--boton de lapiz-->
+        <a type="" *ngIf="generalService.vistabtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <i class="bi bi-pencil"></i>
+        </a>
+      </h3>
+      <p>{{dataJson?.descripcion}}</p>
+    </li>
+  </ul>
+</div>
+
+<div class="card-header" *ngIf="miPorfolio" id="encabezado" [style.background-image]="'url(' + miPorfolio?.fotoBanner + ')'" style="background-position: center center;background-size: cover;
 background-color: rgb(203, 204, 204); display: flex;
     justify-content: flex-start;">
   <img [src]="miPorfolio?.fotoPerfil" alt="" style="margin-bottom: -140px; background-color: rgb(122, 123, 124);">
 </div>
-<div class="card-body">
+<div class="card-body" *ngIf="miPorfolio">
   <section>
     <h1> {{miPorfolio?.nombre}} {{miPorfolio?.apellido}} </h1>
     <h3 style="color: #d9ff2f;">{{miPorfolio?.titulo}}</h3>
