@@ -19,7 +19,7 @@
       height: 100px;
 }
 
-.barra-nav {
+.barra-nav .menu-footer{
       display: flex;
       width: 100%;
       flex-direction: row;
