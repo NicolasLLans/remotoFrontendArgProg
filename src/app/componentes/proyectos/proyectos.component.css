@@ -120,5 +120,16 @@ form {
             display: flex;
             flex-direction: column;
       }
+      .titulo{
+            font-size: 30px;
+      }
+
+      .cabeza-tarjeta{
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+            gap: 15px;
+            padding: 25px;
+            align-items: center;
+        }
 
 }
