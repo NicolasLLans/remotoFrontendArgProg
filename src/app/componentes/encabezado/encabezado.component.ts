@@ -32,7 +32,6 @@ export class EncabezadoComponent {
       (response: any) => {
         // Datos internos cargados
         this.dataJson = response[0];
-        console.log(this.dataJson.nombre)
       },
       (error: any) => {
         console.error('Error al cargar los datos internos', error);

@@ -35,7 +35,6 @@ export class EducacionComponent implements OnInit{
     this.generalService.obtenerDbjson().subscribe(
       (response:any) => {
       this.educacionListDBJson = response[0].educacionList;
-      console.log(response[0].educacionList);
     });
 
     this.dataService.misEducaciones$.subscribe(data => {

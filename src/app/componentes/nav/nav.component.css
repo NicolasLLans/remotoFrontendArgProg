@@ -2,6 +2,7 @@
     background-color: rgba(0, 0, 0, 0.541);
     height: 58px;
     padding: 0 16px;
+    width: 100%;
 }
 #offcanvasDarkNavbar{
     background-color: rgba(0, 0, 0, 1);
@@ -78,9 +79,12 @@ button i{
     flex-direction: row;
 }
 
-@media (max-width: 250px) {
+@media (max-width: 350px) {
     .navbar-brand {
         font-size: 14px;
+    }
+    a span{
+        display: none;
     }
 }
 

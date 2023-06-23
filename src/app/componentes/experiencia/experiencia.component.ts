@@ -38,7 +38,6 @@ export class ExperienciaComponent {
     this.generalService.obtenerDbjson().subscribe(
       (response:any) => {
       this.experienciaListDBJson = response[0].experienciaList;
-      console.log(response[0].experienciaList);
     });
     
     this.dataService.misExperiencias$.subscribe(data => {

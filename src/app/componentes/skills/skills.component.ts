@@ -35,7 +35,6 @@ export class SkillsComponent {
     this.generalService.obtenerDbjson().subscribe(
       (response:any) => {
       this.skillsListDBJson = response[0].skillsList;
-      console.log(response[0].skillsList);
     });
 
     this.dataService.misSkills$.subscribe(data => {

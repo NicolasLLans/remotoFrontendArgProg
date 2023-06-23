@@ -34,7 +34,6 @@ export class ProyectosComponent {
     this.generalService.obtenerDbjson().subscribe(
       (response:any) => {
       this.proyectoListDBJson = response[0].proyectosList;
-      console.log(response[0].proyectosList);
     });
 
     this.dataService.misProyectos$.subscribe(data => {

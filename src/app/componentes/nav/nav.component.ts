@@ -24,7 +24,6 @@ export class NavComponent implements OnInit {
     this.generalService.obtenerDbjson().subscribe(
       (response:any) => {
       this.fotoPerfilDBJson = response[0];
-      console.log(response[0]);
     });
     
     this.dataService.miPorfolio$.subscribe(data => {
