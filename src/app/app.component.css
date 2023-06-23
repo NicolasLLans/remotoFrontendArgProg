@@ -19,7 +19,7 @@
       height: 100px;
 }
 
-.barra-nav .menu-footer{
+.barra-nav, .menu-footer{
       display: flex;
       width: 100%;
       flex-direction: row;
@@ -32,6 +32,7 @@
       margin: 0;
       align-content: center;
 }
+
 
 .barra-footer {
       display: grid;
@@ -58,13 +59,13 @@ app-login {
       border: 1px solid white;
       border-radius: 14px;
       margin: 10px 0px;
-      padding: 8px 24px;
+      padding: 8px 14px;
       text-decoration: none;
       color: white;
 }
 
-.menu li{
-      margin-top: 12px;
+.menu-footer li{
+      margin-top: 20px;
       width: 200px;
 } 
 
