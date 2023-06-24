@@ -42,7 +42,7 @@
                 "img": "https://media-exp2.licdn.com/dms/image/C4E0BAQFYpd4o3bagjg/company-logo_200_200/0/1631600310329?e=2147483647&v=beta&t=x1ZWQlwNYW7RthQqi4eugH52PwQvh6dUxckdaD3Gnx4"
             }
         ],
-        "skillList": [
+        "skillsList": [
             {
                 "id": 1,
                 "titulo": "HTML",
