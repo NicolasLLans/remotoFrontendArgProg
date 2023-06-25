@@ -1,5 +1,5 @@
 <!--SECCION DE EXPERIENCIA-->
-<div class="textos" id="experiencia">
+<div id="experiencia">
   <div class="card-cabeza">
     <div class="" id="">
       <h2 class="" id="">
@@ -15,7 +15,7 @@
       </a>
     </div>
   </div>
-  <ul class="lista-skills" *ngIf="!experienciaList">
+  <ul class="lista-skills textos" *ngIf="!experienciaList">
     <li class="items-card" *ngFor="let experiencia of experienciaListDBJson">
       <div class="content-img">
         <img [src]="experiencia.img" alt="" class="img-list">
@@ -27,7 +27,7 @@
       </div>
     </li>
   </ul>
-  <ul class="lista-skills" *ngIf="experienciaList">
+  <ul class="lista-skills textos" *ngIf="experienciaList">
     <li class="items-card" *ngFor="let experiencia of experienciaList">
       <div class="content-img">
         <img [src]="experiencia.img" alt="" class="img-list">
@@ -100,7 +100,7 @@
       </div>
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="eliminarExperiencia()">
-          <label for="exampleFormControlInput1" class="form-label">ID</label>
+          <label for="exampleFormControlInput1" class="form-label">Elegir Experiencia</label>
           <select class="form-control" formControlName="id" aria-label="Default select example">
             <option *ngFor="let experiencia of experienciaList" [value]="experiencia.id">{{experiencia.titulo}}</option>
           </select>

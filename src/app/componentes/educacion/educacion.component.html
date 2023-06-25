@@ -14,7 +14,7 @@
       </a>
     </div>
   </div>
-  <ul class="lista-skills" *ngIf="!educacionList" >
+  <ul class="lista-skills textos" *ngIf="!educacionList" >
     <li class="items-card" *ngFor="let educacion of educacionListDBJson">
         <div class="content-img">
           <img [src]="educacion?.img" alt="" class="img-list">
@@ -26,7 +26,7 @@
         </div>
     </li>
   </ul>
-  <ul class="lista-skills" *ngIf="educacionList" >
+  <ul class="lista-skills textos" *ngIf="educacionList" >
     <li class="items-card" *ngFor="let educacion of educacionList">
         <div class="content-img">
           <img [src]="educacion?.img" alt="" class="img-list">
@@ -99,7 +99,7 @@
       </div>
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="eliminarEducacion()">
-          <label for="example"class="form-label">ID</label>
+          <label for="example"class="form-label">Elegir Educación</label>
           <select class="form-control" formControlName="id" aria-label="Default select example" >
             <option *ngFor="let educacion of educacionList" [value]="educacion.id">{{educacion.titulo}}</option>
           </select>
