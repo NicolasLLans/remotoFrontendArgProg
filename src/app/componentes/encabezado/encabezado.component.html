@@ -58,7 +58,7 @@ background-color: rgb(203, 204, 204); display: flex;
       <div class="modal-body">
         <form [formGroup]="formulario" (submit)="editarPerfil()">
           <div class="step-1">
-            <div class="mb-3 id-perfil">
+            <div class="mb-3 id-perfil" style="display: none;">
               <label for="idporfolio" class="form-label">ID</label>
               <input type="text" class="form-control" formControlName="id" id="idporfolio">
             </div>
