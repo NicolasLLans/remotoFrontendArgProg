@@ -16,8 +16,9 @@
 </div>
 <div class="contenedor-proyectos" *ngIf="!proyectoList">
   <!--CUERPO DE LA TARJETA PROYECTO-->
-  <div class="caja-tarjeta"  *ngFor="let proyectos of proyectoListDBJson"
-    [style.background-image]="'url(' + proyectos.img + ')'">
+  <a class="caja-tarjeta"  *ngFor="let proyectos of proyectoListDBJson"
+    [style.background-image]="'url(' + proyectos.img + ')'" [href]="proyectos.link" target="_blank"
+    rel="noreferrer noopener">
     <li class="tarjeta-de-proyecto">
       <h3>{{proyectos.titulo}}</h3>
       <div class="tarjeta-pie">
@@ -26,7 +27,7 @@
             rel="noreferrer noopener">Ver más</a></button>
       </div>
     </li>
-  </div>
+  </a>
 </div>
 <div class="contenedor-proyectos" *ngIf="proyectoList">
   <!--CUERPO DE LA TARJETA PROYECTO-->
