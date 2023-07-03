@@ -13,6 +13,7 @@
 .card-contenedor {
       border: none;
       background: transparent;
+      height: inherit;
 }
 
 .espacio {
