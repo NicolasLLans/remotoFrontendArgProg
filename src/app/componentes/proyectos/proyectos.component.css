@@ -16,7 +16,7 @@ a {
 
 
 .contenedor-proyectos {
-      padding: 2px 0;
+      padding: 2px 25px;
       max-height: 495px;
       overflow-y: scroll;
       display: flex;
@@ -121,6 +121,7 @@ form {
 
       .contenedor-proyectos {
             height: 89vh;
+            padding: 0;
       }
 
       form {

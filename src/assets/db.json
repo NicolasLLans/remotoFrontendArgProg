@@ -5,7 +5,7 @@
         "apellido": "Lanselota",
         "titulo": "Developer Full Stack Jr",
         "localidad": "CABA, Argentina",
-        "descripcion": "Apasionado programador Full Stack Jr. con experiencia en Angular, Spring Boot, React, Node.js y Express. Mi enfoque es desarrollar soluciones intuitivas y eficientes para mejorar la experiencia del usuario.",
+        "descripcion": "Tengo experiencia en Angular, Spring Boot, React, Node.js y Express. Mi enfoque es desarrollar soluciones intuitivas y eficientes para mejorar la experiencia del usuario. Este porfolio consume una API Rest desarrollada por mi.",
         "fotoPerfil": "https://i.imgur.com/7xygCwI.png",
         "fotoBanner": "https://i.gifer.com/origin/0e/0e01e56732d4fae6e63f9fc4beeaded9.gif",
         "educacionList": [
@@ -128,14 +128,6 @@
                 "fechaIni": 2020,
                 "fechaFin": 2023,
                 "descripcion": "Tienda online",
-                "img": "https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_1280.png"
-            },
-            {
-                "id": 3,
-                "titulo": "Developer full stack jr",
-                "fechaIni": 2022,
-                "fechaFin": 2023,
-                "descripcion": "tienda online aplicaciones",
                 "img": "https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_1280.png"
             },
             {
