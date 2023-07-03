@@ -17,7 +17,7 @@ a {
 
 .contenedor-proyectos {
       padding: 2px 0;
-      height: 76vh;
+      max-height: 495px;
       overflow-y: scroll;
       display: flex;
       flex-direction: column;
@@ -34,19 +34,23 @@ a {
 }
 
 .contenedor-proyectos::-webkit-scrollbar {
-width: 5px; /* Ancho de la barra de desplazamiento */
+      width: 5px;
+      /* Ancho de la barra de desplazamiento */
 }
 
 .contenedor-proyectos::-webkit-scrollbar-track {
-background-color: rgba(67, 75, 107, 1) 40%; /* Color de fondo de la pista de desplazamiento */
+      background-color: rgba(67, 75, 107, 1) 40%;
+      /* Color de fondo de la pista de desplazamiento */
 }
 
 .contenedor-proyectos::-webkit-scrollbar-thumb {
-background-color: #7793cf; /* Color del pulgar de la barra de desplazamiento */
+      background-color: #7793cf;
+      /* Color del pulgar de la barra de desplazamiento */
 }
 
 .contenedor-proyectos::-webkit-scrollbar-thumb:hover {
-background-color: #555; /* Color del pulgar de la barra de desplazamiento en estado de hover */
+      background-color: #555;
+      /* Color del pulgar de la barra de desplazamiento en estado de hover */
 }
 
 .caja-tarjeta {
@@ -75,19 +79,23 @@ background-color: #555; /* Color del pulgar de la barra de desplazamiento en est
       border: none;
 }
 
+.boton-tarjeta a:hover {
+      text-shadow: 1px 1px 2px rgba(97, 48, 129, 0.534);
+      background-color: #7793cf;
+}
+
 
 .descripcion-tarjeta {
       margin-bottom: 0;
 }
 
 .cabeza-tarjeta {
-
       grid-template-columns: 1fr 1fr;
       display: grid;
       gap: 15px;
       padding: 15px;
       align-items: center;
-
+      max-height: 70px;
 }
 
 .cabeza-tarjeta h2 {
@@ -120,16 +128,18 @@ form {
             display: flex;
             flex-direction: column;
       }
-      .titulo{
-            font-size: 30px;
+
+      .titulo {
+            font-size: 20px;
+            padding: 0;
       }
 
-      .cabeza-tarjeta{
+      .cabeza-tarjeta {
             grid-template-columns: 1fr 1fr;
             display: grid;
             gap: 15px;
-            padding: 25px;
+            padding: 25px 14px;
             align-items: center;
-        }
+      }
 
 }
