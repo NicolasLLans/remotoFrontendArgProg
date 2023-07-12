@@ -169,6 +169,7 @@ i {
 	height: 50px;
 	border-radius: 5px;
 	background-color: aliceblue;
+	object-fit: cover;
 }
 
 .contenedor-encabezado {
