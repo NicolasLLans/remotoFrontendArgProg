@@ -12,8 +12,9 @@
 
 .card-contenedor {
       border: none;
-      background: transparent;
+      background: #7f638b14;
       height: inherit;
+      border-radius: 10px;
 }
 
 .espacio {

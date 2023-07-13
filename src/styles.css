@@ -173,19 +173,13 @@ i {
 }
 
 .contenedor-encabezado {
-	/*background-image: url(./img/banner.jpg); */
-	/* border: solid 1px; */
 	display: flex;
 	justify-content: center;
 	border-radius: 0px;
 	text-align: center;
-	/* padding: 20px; */
 	background-size: cover;
 	background-position: center center;
-	/* width: 30%; */
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 .contenedor-encabezado ul {

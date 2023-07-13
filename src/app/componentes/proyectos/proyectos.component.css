@@ -19,6 +19,7 @@ a {
       padding: 2px 25px;
       max-height: 495px;
       overflow-y: scroll;
+      scroll-snap-type: y mandatory;
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -57,6 +58,7 @@ a {
       border-radius: 5px;
       background-position: center center;
       background-size: cover;
+      scroll-snap-align: start;
 }
 
 .tarjeta-de-proyecto {

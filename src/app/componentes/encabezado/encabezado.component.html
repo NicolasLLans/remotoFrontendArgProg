@@ -1,7 +1,5 @@
-<div class="card-header" *ngIf="!miPorfolio" id="encabezado" [style.background-image]="'url(' + dataJson?.fotoBanner + ')'" style="background-position: center center;background-size: cover;
-background-color: rgb(1, 4, 12); display: flex;
-    justify-content: flex-start;">
-  <img [src]="dataJson?.fotoPerfil" alt="" style="margin-bottom: -140px; background-color: var(--bs-green);">
+<div class="card-header" *ngIf="!miPorfolio" [style.background-image]="'url(' + dataJson?.fotoBanner + ')'">
+  <img [src]="dataJson?.fotoPerfil" alt="NicoDev">
 </div>
 <div class="card-body" *ngIf="!miPorfolio">
   <section>
@@ -45,6 +43,9 @@ background-color: rgb(203, 204, 204); display: flex;
     </li>
   </ul>
 </div>
+
+
+
 
 <!--Modal-->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

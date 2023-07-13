@@ -1,3 +1,10 @@
+.card-header{
+      background-position: center center;
+      background-size: cover;
+      background-color: rgb(1, 4, 12); 
+      display: flex;
+      justify-content: flex-start;
+}
 .card-header img{
       position: relative;
       width: 100px;
@@ -6,6 +13,7 @@
       left: 0;
       border-radius: 50%;
       border: 1px solid;
+      margin-bottom: -140px; background-color: var(--bs-green)!important;
 }
 
 .card-body{
@@ -13,7 +21,7 @@
       flex-direction: column;
       gap: 70px;
       text-align: start;
-      padding: 60px 25px 47px 25px;
+      margin-top: 42px;
 }
 ul{
       list-style: none;
