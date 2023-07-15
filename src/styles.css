@@ -1,6 +1,6 @@
 :root {
 	--color-primario: #0077B5;
-	--color-secundario: #4A4A4A;
+	--color-secundario: #d9ff2f;
 	--color-fondo: #E9EBEE;
 	--color-contraste: #FFFFFF;
 	--degradado-bg:linear-gradient(329deg, rgba(0, 0, 0, 1) 6%, rgba(61, 74, 57, 1) 20%, rgba(67, 75, 107, 1) 40%, rgba(23, 54, 72, 1) 60%, rgba(3, 11, 16, 1) 80%, rgba(0, 0, 0, 1) 100%);

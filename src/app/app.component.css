@@ -1,13 +1,14 @@
 .caja-1 {
       display: flex;
-      justify-content: center;
-      align-content: center;
-      padding: 25px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 250px;
+      padding: 10px;
 }
 
 .titulo-footer {
       height: 25px;
+      font-size: var(--h3-tamaño);
 }
 
 .card-contenedor {
@@ -21,7 +22,7 @@
       height: 100px;
 }
 
-.barra-nav, .menu-footer{
+.barra-nav {
       display: flex;
       width: 100%;
       flex-direction: row;
@@ -42,10 +43,6 @@
       align-content: center;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
-      padding: 25px;
-      width: 95%;
-      margin: auto;
-      max-width: 1200px;
       background-color: #0c132159;
       height: 350px;
 }
@@ -57,37 +54,82 @@ app-login {
       justify-content: center;
 }
 
-.boton-wp{
-      border: 1px solid white;
-      border-radius: 14px;
-      margin: 10px 0px;
-      padding: 8px 14px;
+.boton-wp {
+      background-color: transparent;
+      border: 2px solid var(--color-contraste);
+      border-radius: 50%;
       text-decoration: none;
       color: white;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.5s ease-in-out;
 }
 
-.menu-footer li{
-      margin-top: 20px;
-      width: 200px;
-} 
+.boton-wp:hover {
+      background-color: rgb(51, 68, 62);
+}
 
-.contenedor-edu::-webkit-scrollbar {
-            display: block;
-            opacity: 0.5;
+.boton-wp .iconos {
+      font-size: 20px;
+      padding: 0;
+      color: var(--color-contraste);
+}
+
+.caja-1 a span{
+      padding-left: 11px;
+}
+
+.menu-footer {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      list-style: none;
+      text-decoration: none;
+      margin: 0;
+      align-content: center;
 }
 
 .contenedor-edu::-webkit-scrollbar {
-      width: 2px; /* Ancho de la barra de desplazamiento */
-    }
-    
-    .contenedor-edu::-webkit-scrollbar-track {
-      background-color: rgba(67, 75, 107, 1) 40%; /* Color de fondo de la pista de desplazamiento */
-    }
-    
-    .contenedor-edu::-webkit-scrollbar-thumb {
-      background-color: #7793cf; /* Color del pulgar de la barra de desplazamiento */
-    }
-    
-    .contenedor-edu::-webkit-scrollbar-thumb:hover {
-      background-color: #555; /* Color del pulgar de la barra de desplazamiento en estado de hover */
-    }
+      display: block;
+      opacity: 0.5;
+}
+
+.contenedor-edu::-webkit-scrollbar {
+      width: 2px;
+      /* Ancho de la barra de desplazamiento */
+}
+
+.contenedor-edu::-webkit-scrollbar-track {
+      background-color: rgba(67, 75, 107, 1) 40%;
+      /* Color de fondo de la pista de desplazamiento */
+}
+
+.contenedor-edu::-webkit-scrollbar-thumb {
+      background-color: #7793cf;
+      /* Color del pulgar de la barra de desplazamiento */
+}
+
+.contenedor-edu::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+      /* Color del pulgar de la barra de desplazamiento en estado de hover */
+}
+
+@media (max-width:450px) {
+      .barra-footer {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            background-color: #0c132159;
+            height: 350px;
+      }
+      .menu-footer{
+            padding: 10px;
+      }
+}
