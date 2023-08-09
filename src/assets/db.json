@@ -247,6 +247,15 @@
                 "descripcion": "Tienda online con wordpress",
                 "img": "https://imgur.com/9RQJmVP.png",
                 "link": "https://tisky.com.ar/"
+            },
+            {
+                "id": 552,
+                "titulo": "Lista de libros Midudev",
+                "fechaIni": 0,
+                "fechaFin": 0,
+                "descripcion": "Prueba técnica, app web hecha en angular",
+                "img": "https://i.imgur.com/1ZxsIYS.png",
+                "link": "https://listadelibrosnicodev.netlify.app/"
             }
         ]
     }
