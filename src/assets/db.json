@@ -146,7 +146,7 @@
                 "fechaIni": 2020,
                 "fechaFin": 2021,
                 "descripcion": "Sitio web, con tienda online hecho con wordpress.",
-                "img": "https://i.imgur.com/JUc6RQc.png",
+                "img": "https://i.imgur.com/djdCSQ4.jpg",
                 "link": "https://faunacosmeticanatural.com/"
             },
             {
@@ -155,7 +155,7 @@
                 "fechaIni": 2023,
                 "fechaFin": 2023,
                 "descripcion": "Aplicacion hecha en angular con un servidor JsonServer de prueba",
-                "img": "https://i.imgur.com/YTX5toL.png",
+                "img": "https://i.imgur.com/CbMIx4f.jpg",
                 "link": "https://inspiring-raindrop-33e1d4.netlify.app/"
             },
             {
@@ -164,7 +164,7 @@
                 "fechaIni": 2023,
                 "fechaFin": 2023,
                 "descripcion": "Desarrollada con html, css y js.",
-                "img": "https://i.imgur.com/FgerVc1.png",
+                "img": "https://i.imgur.com/2m6LWTG.jpg",
                 "link": "https://cuentaregresivanico.netlify.app/"
             },
             {
@@ -173,7 +173,7 @@
                 "fechaIni": 2023,
                 "fechaFin": 2023,
                 "descripcion": "Desarrollada con html, css, js.",
-                "img": "https://i.imgur.com/oxxYWyK.png",
+                "img": "https://i.imgur.com/ww964nh.jpg",
                 "link": "https://calculadoradenico.netlify.app/"
             },
             {
@@ -182,7 +182,7 @@
                 "fechaIni": 2023,
                 "fechaFin": 2023,
                 "descripcion": "Drag and Drop componente hecho con la librería sortable.",
-                "img": "https://i.imgur.com/m2oWuD4.png",
+                "img": "https://i.imgur.com/sB0oTtV.jpg",
                 "link": "https://draganddropsortablenico.netlify.app/"
             },
             {
@@ -191,7 +191,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Maquetado con HTML, CSS y JS. simula ser un carrito de compra.",
-                "img": "https://i.imgur.com/CoaH5SY.png",
+                "img": "https://i.imgur.com/S4YRbQV.jpg",
                 "link": "https://formulario-steps.netlify.app/"
             },
             {
@@ -200,7 +200,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Generador de QR en Angular. ",
-                "img": "https://i.imgur.com/fofDpkR.png",
+                "img": "https://i.imgur.com/bhruIEE.jpg",
                 "link": "https://generadordeqr-nicodev.netlify.app/"
             },
             {
@@ -209,7 +209,7 @@
                 "fechaIni": 2023,
                 "fechaFin": 2023,
                 "descripcion": "Hecho con Angular",
-                "img": "https://i.imgur.com/XrgQUeg.png",
+                "img": "https://i.imgur.com/Ew8KWyV.jpg",
                 "link": "https://clondeyoutube.netlify.app/"
             },
             {
@@ -218,7 +218,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Desarrollo modo claro/oscuro en JS",
-                "img": "https://i.imgur.com/8waAtES.png",
+                "img": "https://i.imgur.com/g28T0oR.jpg",
                 "link": "https://modo-claro-oscuro.netlify.app/"
             },
             {
@@ -227,7 +227,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Desarrollado con Vite+React",
-                "img": "https://imgur.com/XKJqzVa.png",
+                "img": "https://i.imgur.com/4FgHFfS.jpg",
                 "link": "https://tatetinico.netlify.app/"
             },
             {
@@ -236,7 +236,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Proyecto FontMentor, HTML, JS, CSS",
-                "img": "https://imgur.com/wQR9yig.png",
+                "img": "https://i.imgur.com/TSL5DRt.jpg",
                 "link": "https://tarjetadeproducto.netlify.app/"
             },
             {
@@ -245,7 +245,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Tienda online con wordpress",
-                "img": "https://imgur.com/9RQJmVP.png",
+                "img": "https://i.imgur.com/iUFt5pI.jpg",
                 "link": "https://tisky.com.ar/"
             },
             {
@@ -254,7 +254,7 @@
                 "fechaIni": 0,
                 "fechaFin": 0,
                 "descripcion": "Prueba técnica, app web hecha en angular",
-                "img": "https://i.imgur.com/1ZxsIYS.png",
+                "img": "https://i.imgur.com/1PPWZAv.jpg",
                 "link": "https://listadelibrosnicodev.netlify.app/"
             }
         ]
