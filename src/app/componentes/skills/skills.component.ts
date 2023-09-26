@@ -14,7 +14,7 @@ import { SkillsService } from 'src/app/servicios/skills.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
-
+  
   public formulario!: FormGroup;
   skillsList:any;
   skillsListDBJson:any;
