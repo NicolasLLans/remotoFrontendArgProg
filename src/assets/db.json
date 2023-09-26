@@ -48,77 +48,77 @@
                 "titulo": "HTML",
                 "descripcion": "",
                 "img": "https://www.abdiseno.com.ar/wp-content/uploads/2015/09/html5-logo-600-580x5801.jpg",
-                "porcentaje": 95
+                "porcentaje": 3
             },
             {
                 "id": 53,
                 "titulo": "Typescript",
                 "descripcion": null,
                 "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
-                "porcentaje": 90
+                "porcentaje": 3
             },
             {
                 "id": 102,
                 "titulo": "JS",
                 "descripcion": null,
                 "img": "https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/11531819/JAVASCRIPT.png",
-                "porcentaje": 80
+                "porcentaje": 3
             },
             {
                 "id": 152,
                 "titulo": "JAVA",
                 "descripcion": "",
                 "img": "https://cdn.freebiesupply.com/logos/large/2x/java-logo-png-transparent.png",
-                "porcentaje": 90
+                "porcentaje": 3
             },
             {
                 "id": 158,
                 "titulo": "CSS",
                 "descripcion": null,
                 "img": "https://webroad.pl/wp-content/uploads/2014/07/css3-logo.jpg",
-                "porcentaje": 90
+                "porcentaje": 3
             },
             {
                 "id": 252,
                 "titulo": "NODE JS",
                 "descripcion": null,
                 "img": "https://vistaran-tech.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/05/13104926/nodejs-logo.png",
-                "porcentaje": 90
+                "porcentaje": 2
             },
             {
                 "id": 253,
                 "titulo": "Angular",
                 "descripcion": null,
                 "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
-                "porcentaje": 90
+                "porcentaje": 3
             },
             {
                 "id": 254,
                 "titulo": "React",
                 "descripcion": null,
                 "img": "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
-                "porcentaje": 80
+                "porcentaje": 2
             },
             {
                 "id": 256,
                 "titulo": "Spring Boot",
                 "descripcion": null,
                 "img": "https://spring.io/img/logos/spring-initializr.svg",
-                "porcentaje": 90
+                "porcentaje": 3
             },
             {
                 "id": 302,
                 "titulo": "MySQL",
                 "descripcion": "",
                 "img": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-transparent-svg-vector-bie-supply-2.png",
-                "porcentaje": 85
+                "porcentaje": 3
             },
             {
                 "id": 303,
                 "titulo": "MongoDB",
                 "descripcion": null,
                 "img": "https://w7.pngwing.com/pngs/429/921/png-transparent-mongodb-plain-wordmark-logo-icon.png",
-                "porcentaje": 85
+                "porcentaje": 1
             }
         ],
         "experienciaList": [
