@@ -21,7 +21,7 @@ a {
       overflow-y: scroll;
       scroll-snap-type: y mandatory;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 15px;
 }
 
