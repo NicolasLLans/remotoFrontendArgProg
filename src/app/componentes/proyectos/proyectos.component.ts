@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { DataService } from 'src/app/data.service';
@@ -17,7 +17,7 @@ export class ProyectosComponent {
   proyectoList: any;
   private proyectoActualizada = new Subject<void>();
   formulario!: FormGroup;
-
+  
   constructor(public generalService: GeneralService, private dataService: DataService, private formBuilder: FormBuilder, private proyectosService: ProyectosService) {  }
 
   ngOnInit(): void {
