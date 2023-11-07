@@ -137,6 +137,14 @@
                 "fechaFin": 2023,
                 "descripcion": "Tienda online",
                 "img": "https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_1280.png"
+            },
+            {
+                "id": 302,
+                "titulo": "Impulso consultora",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Diseño de sitio web para consultora contable.",
+                "img": "https://impulsoconsultora.com.ar/assets/img/logo-impulso.png"
             }
         ],
         "proyectosList": [
@@ -256,6 +264,15 @@
                 "descripcion": "Prueba técnica, app web hecha en angular",
                 "img": "https://i.imgur.com/1PPWZAv.jpg",
                 "link": "https://listadelibrosnicodev.netlify.app/"
+            },
+            {
+                "id": 602,
+                "titulo": "Impulso consultora",
+                "fechaIni": 2023,
+                "fechaFin": 2023,
+                "descripcion": "Sitio web profesional, basado en el framework Angular.",
+                "img": "https://i.imgur.com/Qe1inEP.png",
+                "link": "https://impulsoconsultora.com.ar/"
             }
         ]
     }
