@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { GeneralService } from './general.service';
 import { DataService } from './data.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+declare var gtag: any;
 
 @Component({
   selector: 'app-root',
@@ -16,7 +20,17 @@ export class AppComponent {
   misExp:any;
   
 
-  constructor(public generalService: GeneralService, private dataService: DataService){}
+  constructor(public generalService: GeneralService, private dataService: DataService, private router: Router){
+    const navEndEvents$ = this.router.events.pipe(filter(event => event instanceof NavigationEnd));
+
+    navEndEvents$.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        gtag("config", "G-8ZZ916EZL6", {
+          'page_path': event.urlAfterRedirects
+        });
+      }
+    });
+  }
 
   ngOnInit(){
     this.cargarDatosDelPorfolio();
